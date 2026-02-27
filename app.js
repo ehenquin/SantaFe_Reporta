@@ -205,5 +205,12 @@ async function cargarReportes() {
 // Ejecutar al inicio
 cargarReportes();
 
+// ---- MENU MOVIL ----
+window.toggleMenu = function() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('active');
+}
+
+
 
 // v2
