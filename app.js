@@ -2,7 +2,7 @@
 
 
 // 1. Importamos las herramientas necesarias
-import { guardarReporteDB, obtenerReportesDB } from './api.js?v=1';
+import { guardarReporteDB, obtenerReportesDB } from './api.js';
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
 // CONFIGURACIÓN DE SUPABASE (Necesaria para las funciones de admin/denuncia)
@@ -205,3 +205,5 @@ async function cargarReportes() {
 // Ejecutar al inicio
 cargarReportes();
 
+
+// v2
