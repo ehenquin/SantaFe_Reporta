@@ -60,8 +60,68 @@ select, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid
 .btn-save { flex: 2; background: #27ae60; color: white; border: none; padding: 12px; border-radius: 5px; cursor: pointer; font-weight: bold; }
 .btn-cancel { flex: 1; background: #e74c3c; color: white; border: none; padding: 12px; border-radius: 5px; cursor: pointer; }
 
+
+
+
+
+
+
+
+
+
 /* Responsive móvil */
-@media (max-width: 600px) {
-    #sidebar { left: -250px; }
-    #sidebar.active { left: 0; }
+@media (max-width: 768px) {
+
+    #sidebar {
+        left: -250px;
+        width: 220px;
+        padding: 15px;
+    }
+
+    #sidebar.active {
+        left: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    #sidebar {
+        width: 220px;
+        padding: 15px;
+    }
+
+    #sidebar h2 {
+        font-size: 18px;
+    }
+
+    #sidebar h4 {
+        font-size: 14px;
+    }
+
+    #sidebar ul li {
+        font-size: 13px;
+    }
+
+    #map {
+        margin-left: 0;
+    }
+
+    #toggle-sidebar {
+        top: 15px;
+        left: 15px;
+        padding: 12px;
+        font-size: 18px;
+    }
 }
