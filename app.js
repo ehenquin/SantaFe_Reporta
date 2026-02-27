@@ -13,6 +13,13 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 const map = L.map('map').setView([-31.6333, -60.7000], 13);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
+
+
+
+
+
+
+
 let tempCoords = {};
 
 // 2. Función para asignar color
