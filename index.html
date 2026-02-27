@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Fe Reporta - Mapa</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+
+
+<div id="sidebar">
+    <h2>Santa Fe Reporta</h2>
+    <hr>
+    <div class="stats">
+        <p><strong>Estado del Sistema:</strong> <span style="color: #28a745;">Operativo</span></p>
+    </div>
+    <hr>
+    <h4>Leyenda de Problemas</h4>
+    <ul style="list-style: none; padding: 0;">
+        <li><span class="dot" style="background: red;"></span> Pozos</li>
+        <li><span class="dot" style="background: yellow;"></span> Falta de Luz</li>
+        <li><span class="dot" style="background: blue;"></span> Inundaciones</li>
+        <li><span class="dot" style="background: brown;"></span> Basura</li>
+        <li><span class="dot" style="background: orange;"></span> Semáforos</li>
+    </ul>
+
+    <div class="author-section" style="position: absolute; bottom: 20px; left: 20px; font-size: 0.85em; opacity: 0.8;">
+        <hr style="margin-bottom: 15px;">
+        <p style="margin-bottom: 5px;">Desarrollada por:</p>
+        <a href="https://ehenquin.github.io/LinkTreePro/" target="_blank" style="color: #3498db; text-decoration: none; font-weight: bold; font-size: 1.1em;">
+            Dr. Eduardo R. Henquín
+        </a>
+    </div>
+</div>
+
+
+
+
+    <button id="toggle-sidebar" onclick="toggleMenu()">☰</button>
+
+    <div id="map"></div>
+
+    <div id="report-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Nuevo Reporte Urbano</h3>
+            <p id="display-coords"></p>
+            
+            <label>Categoría:</label>
+            <select id="category">
+                <option value="Pozos">Bache / Pozo</option>
+                <option value="Falta de luz">Luminaria apagada</option>
+                <option value="Inundaciones">Anegamiento</option>
+                <option value="Basura">Basura acumulada</option>
+                <option value="Semaforos">Falla de Semáforo</option>
+            </select>
+
+            <label>Descripción del problema:</label>
+            <textarea id="description" placeholder="Ej: Hay un pozo profundo en la intersección..."></textarea>
+            <label>Subir Foto:</label>
+            <input type="file" id="foto" accept="image/*" style="width: 100%; margin: 10px 0;">
+
+
+
+            <div class="btn-group">
+                <button onclick="enviarDatos()" class="btn-save">Enviar Reporte</button>
+                <button onclick="cerrarModal()" class="btn-cancel">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+
+
+
+</html>
