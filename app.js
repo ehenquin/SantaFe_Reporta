@@ -15,6 +15,27 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
 
 
+// ---- GPS AUTO CENTRADO ----
+if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+        const lat = position.coords.latitude;
+        const lng = position.coords.longitude;
+
+        // Centramos el mapa
+        map.setView([lat, lng], 15);
+
+        // Punto azul de ubicación
+        L.circleMarker([lat, lng], {
+            radius: 8,
+            fillColor: "#007bff",
+            color: "#ffffff",
+            weight: 2,
+            fillOpacity: 1
+        }).addTo(map).bindPopup("Estás aquí");
+    });
+}
+
+
 
 
 
